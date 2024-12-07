@@ -14,19 +14,18 @@ const compliments = [
     "You're absolutely awesome!"
   ];
   
-  const complimentBox = document.getElementById('compliment');
+  const compBox = document.getElementById('compliment');
   const generateBtn = document.getElementById('generate');
   
   generateBtn.addEventListener('click', function() {
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-    complimentBox.style.transform = 'scale(0)';
-    complimentBox.style.opacity = '0';
+    compBox.style.transform = 'scale(0)';
+    compBox.style.opacity = '0';
   
     setTimeout(() => {
-      complimentBox.textContent = randomCompliment;
-  
-      complimentBox.style.transform = 'scale(1)';
-      complimentBox.style.opacity = '1';
+      compBox.textContent = randomCompliment;
+      compBox.style.transform = 'scale(1)';
+      compBox.style.opacity = '1';
     }, 500); 
   });
   
